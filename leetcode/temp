@@ -1,0 +1,22 @@
+SELECT b.aac003 as aac003,	
+		       b.aac004 as aac004,	
+		       b.yac002 as aac002,  
+		       c.aab004 as aab004,	
+		       d.aca112 as aca112,	
+		       a.aab001 as aab001,
+		       a.aac001 as aac001,
+		       a.acc200 as acc200,
+		       a.acb210 as acb210,
+		       a.ycc222 as ycc222,	
+		       a.acc223 as acc223,	
+		       a.ycc22f as ycc22f,	
+		       a.acc220 as acc220,	
+		       a.acc243 as acc243,  
+		       a.aae017 as aae017,  
+		       a.aae011 as aae011,  
+		DATE_FORMAT(a.aae036,'%Y-%m-%d') as aae036,
+		DATE_FORMAT(a.ycc221,'%Y-%m-%d') as ycc221   
+		  FROM cc22 a , ac01 b , ab01_site c,  cb21 d
+		 where a.aac001 = b.aac001
+		   and a.aab001 = c.aab001
+		   and a.acb210 = d.acb210
